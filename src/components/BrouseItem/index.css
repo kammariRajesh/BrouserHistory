@@ -1,0 +1,28 @@
+.list-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+.time {
+  margin: 10px;
+}
+.app-icon {
+  margin: 10px;
+}
+.title {
+  margin: 10px;
+}
+.domain-url {
+  margin: 10px;
+}
+.list-item-bg-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 40px;
+}
+.delete-icon {
+  background-color: transparent;
+  border: none;
+}

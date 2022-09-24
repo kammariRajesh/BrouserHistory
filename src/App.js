@@ -1,6 +1,6 @@
 import {Component} from 'react'
 
-import BrouseItem from './components/BrouseItem/index'
+import BrouseItem from './components/BrouseItem'
 
 import './App.css'
 
@@ -98,9 +98,14 @@ class App extends Component {
     const {historyList} = this.state
     const {userInput} = this.state
 
-    const searchedList = historyList.filter(each =>
-      each.title.toLowerCase().includes(userInput.toLowerCase()),
-    )
+    const searchedList = historyList.filter(each => {
+      const a = each.title.toLowerCase().includes(userInput.toLowerCase())
+      if (a === true) {
+        return true
+      }
+      document.getElementById('prg').textContent = 'There is no history to show'
+      return false
+    })
 
     return (
       <div>

@@ -20,11 +20,15 @@ class BrouseItem extends Component {
           <p className="title">{title}</p>
           <p className="domain-url">{domainUrl}</p>
         </li>
-        <button type="button" className="delete-icon" data-testid="delete">
+        <button
+          type="button"
+          className="delete-icon"
+          testid="delete"
+          onClick={this.deleteBrouseItem}
+        >
           <img
             src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
             alt="delete"
-            onClick={this.deleteBrouseItem}
           />
         </button>
       </div>
